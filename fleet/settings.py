@@ -344,7 +344,6 @@ UNFOLD = {
     ],
 }
 
-
 }
 
 def badge_callback(request):
