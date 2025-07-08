@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finch-backend
+  namespace: capstone
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: finch-backend
+  template:
+    metadata:
+      labels:
+        app: finch-backend
+    spec:
+      containers:
+        - name: finch-backend
+          image: tutulchakma/finch-backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: django-env-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: finch-backend
+  namespace: capstone
+spec:
+  type: ClusterIP
+  selector:
+    app: finch-backend
+  ports:
+    - port: 8000
+      targetPort: 8000
