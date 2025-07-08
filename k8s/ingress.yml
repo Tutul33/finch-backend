@@ -3,10 +3,8 @@ kind: Ingress
 metadata:
   name: finch-ingress
   namespace: capstone
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx    # <-- add this line
+  ingressClassName: nginx
   rules:
     - host: frontend.local
       http:
@@ -18,7 +16,6 @@ spec:
                 name: finch-frontend
                 port:
                   number: 80
-
     - host: backend.local
       http:
         paths:
