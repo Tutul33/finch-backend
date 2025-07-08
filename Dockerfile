@@ -47,3 +47,4 @@ EXPOSE 8000
 # Run migrations, create superuser, and start server
 # Assumes 'createsuperuser' is managed via custom management command or env check
 CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+
