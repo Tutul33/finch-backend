@@ -278,4 +278,4 @@ spec:
 
 ---
 
-If you want, I can prepare this as a downloadable `.md` file for you too! Just let me know.
+
