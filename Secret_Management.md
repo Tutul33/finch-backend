@@ -51,7 +51,7 @@ stringData:
 To create or update the secret in your Kubernetes cluster, run:
 
 ```bash
-kubectl apply -f kubernetes/secrets/dep-secrets.yml
+kubectl apply -f k8s/dep-secrets.yml
 ```
 
 This will create the secret if it doesn't exist or update it if it does.
