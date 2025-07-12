@@ -1,0 +1,28 @@
+{
+  "id": null,
+  "title": "Kubernetes Cluster Dashboard",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Node CPU Usage",
+      "targets": [
+        {
+          "expr": "sum(rate(container_cpu_usage_seconds_total{job=\"kubelet\", image!=\"\"}[5m])) by (node)",
+          "legendFormat": "{{node}}"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Pod Memory Usage",
+      "targets": [
+        {
+          "expr": "sum(container_memory_usage_bytes{job=\"kubelet\", image!=\"\"}) by (pod)",
+          "legendFormat": "{{pod}}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 30,
+  "version": 1
+}

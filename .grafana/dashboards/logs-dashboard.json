@@ -1,0 +1,26 @@
+{
+  "id": null,
+  "title": "Application Logs",
+  "panels": [
+    {
+      "type": "logs",
+      "title": "Frontend Logs",
+      "targets": [
+        {
+          "expr": "{app=\"finch-frontend\"}"
+        }
+      ]
+    },
+    {
+      "type": "logs",
+      "title": "Backend Logs",
+      "targets": [
+        {
+          "expr": "{app=\"finch-backend\"}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 30,
+  "version": 1
+}

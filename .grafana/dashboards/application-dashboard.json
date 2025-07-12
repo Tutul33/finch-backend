@@ -1,0 +1,28 @@
+{
+  "id": null,
+  "title": "Application Dashboard",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Frontend Request Rate",
+      "targets": [
+        {
+          "expr": "rate(http_requests_total{app=\"finch-frontend\"}[5m])",
+          "legendFormat": "Frontend Requests"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Backend Error Rate",
+      "targets": [
+        {
+          "expr": "rate(http_requests_total{app=\"finch-backend\",status=~\"5..\"}[5m])",
+          "legendFormat": "Backend 5xx Errors"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 30,
+  "version": 1
+}

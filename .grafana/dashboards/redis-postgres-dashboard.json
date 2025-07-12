@@ -1,0 +1,28 @@
+{
+  "id": null,
+  "title": "Redis & PostgreSQL Metrics",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Redis Memory Usage",
+      "targets": [
+        {
+          "expr": "redis_memory_used_bytes",
+          "legendFormat": "Redis Memory"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "PostgreSQL Connections",
+      "targets": [
+        {
+          "expr": "pg_stat_activity_count",
+          "legendFormat": "Active Connections"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 30,
+  "version": 1
+}
