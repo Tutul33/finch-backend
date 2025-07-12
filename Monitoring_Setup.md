@@ -137,7 +137,7 @@ http://loki.capstone.svc.cluster.local:3100/loki/api/v1/push
 ### Grafana UI
 Access Grafana using:
 ```sh
-kubectl port-forward svc/prometheus-stack-grafana -n monitoring 3000:80
+kubectl port-forward svc/prometheus-grafana -n capstone 3000:80
 ```
 Then open: http://localhost:3000
 
