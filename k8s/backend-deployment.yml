@@ -27,6 +27,8 @@ kind: Service
 metadata:
   name: finch-backend
   namespace: capstone
+  labels:
+    app: finch-frontend  
 spec:
   type: ClusterIP
   selector:
