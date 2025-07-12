@@ -62,7 +62,7 @@ helm install loki grafana/loki-stack \
   --set promtail.enabled=false
 
 # Deploy Promtail using your DaemonSet manifest
-kubectl apply -f promtail-daemonset.yaml
+kubectl apply -f loki-promtail.yaml
 ```
 
 Promtail reads logs from `/var/log/pods/...` and sends them to Loki.
@@ -254,3 +254,4 @@ kubectl apply -f prometheus-rules.yaml
 ## Conclusion
 
 You now have a full observability stack with Prometheus for metrics, Loki for logs, and Grafana for visualization. This setup enables proactive monitoring, troubleshooting, and performance analysis for your Kubernetes-based applications.
+
